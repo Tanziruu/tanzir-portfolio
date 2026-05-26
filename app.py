@@ -1,57 +1,74 @@
 import streamlit as st
 
-# --- ১. পেজ কনফিগারেশন ---
-st.set_page_config(page_title="Tanzir's Portfolio", page_icon="💻", layout="centered")
+# ১. পেজ কনফিগ - ডার্ক থিম মোড
+st.set_page_config(page_title="Tanzir Ahmed", layout="centered")
 
-# --- ২. সিএসএস ট্রিক (সব ব্র্যান্ডিং হাইড করার জন্য) ---
-hide_streamlit_style = """
-            <style>
-            [data-testid="stToolbarActions"], .stAppToolbar, footer, 
-            [data-testid="stFooter"], header, [data-testid="stHeader"] 
-            {visibility: hidden; display: none;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# ২. অ্যাপল-স্টাইল ডার্ক মোড ও মডার্ন লেআউট সিএসএস
+st.markdown("""
+    <style>
+    .stApp {background-color: #000000; color: #ffffff;}
+    h1, h2, h3 {color: #ffffff !important; font-weight: 600 !important;}
 
-# --- ৩. সাইডবার ---
-menu = st.sidebar.radio("Go to", ["Home", "Skills", "Projects", "Contact"])
+    /* বাটন ডিজাইন - অ্যাপল স্টাইল */
+    div.stButton > button {
+        background-color: #1c1c1e;
+        color: white;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 10px 20px;
+        transition: 0.4s;
+    }
+    div.stButton > button:hover {
+        background-color: #333;
+        transform: scale(1.05);
+    }
+    /* লিংক বাটনের জন্য একই ডিজাইন */
+    a[href] {text-decoration: none !important;}
 
-# --- ৪. হোম পেজ (অ্যানিমেশনসহ) ---
+    /* হাইড ব্র্যান্ডিং */
+    [data-testid="stToolbarActions"], footer, [data-testid="stFooter"], header {display: none;}
+    </style>
+""", unsafe_allow_html=True)
+
+# ৩. নেভিগেশন
+menu = st.sidebar.radio("Navigate", ["Home", "Skills", "Projects", "Contact"])
+
+# ৪. হোম পেজ (ফ্যান্সি লুক)
 if menu == "Home":
-    st.title("Hi, I'm Tanzir Ahmed")
-    st.subheader("Computer Science & Engineering Student")
-    st.write("Welcome to my personal portfolio! Passionate about coding and building custom solutions.")
+    st.markdown("<h1 style='text-align: center; font-size: 50px;'>Tanzir Ahmed</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #888;'>CSE Student | Developer | Innovator</p>",
+                unsafe_allow_html=True)
 
-    # HTML Lottie Animation (সবচেয়ে স্মুথ ও আধুনিক পদ্ধতি)
-    lottie_html = """
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <div style="display: flex; justify-content: center;">
-        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_4sp5w0d9.json" 
-            background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
-        </lottie-player>
+    st.write("\n\n")
+    # স্মুথ অ্যানিমেটেড টেক্সট ইফেক্ট
+    st.markdown("""
+    <div style='text-align: center; padding: 20px; border-left: 2px solid #0071e3;'>
+        <h3 style='color: #0071e3;'>Welcome to my domain.</h3>
+        <p>Crafting high-performance digital experiences with C++, Python, and modern web tech.</p>
     </div>
-    """
-    st.components.v1.html(lottie_html, height=320)
+    """, unsafe_allow_html=True)
 
-    st.markdown("---")
+    st.write("\n\n")
     col1, col2 = st.columns(2)
     with col1:
-        st.link_button("🌐 GitHub Profile", "https://github.com/Tanziruu", use_container_width=True)
+        if st.button("🚀 Projects"):
+            st.switch_page("app.py")  # এখানে নেভিগেশন লজিক
     with col2:
-        if st.button("Click for Magic! 🎈", use_container_width=True):
+        if st.button("📩 Contact Me"):
             st.balloons()
-            st.success("Welcome!")
 
-# --- ৫. বাকি পেজগুলো ---
+# ৫. স্কিলস ও প্রজেক্টের জন্য মডার্ন কার্ড ডিজাইন
 elif menu == "Skills":
-    st.title("My Technical Skills")
-    st.write("- **C++** (Core Programming)\n- **Python** (Automation)\n- **Dart** (App Dev)")
+    st.title("My Arsenal")
+    cols = st.columns(3)
+    skills = ["Python", "C++", "Cybersecurity"]
+    for i, skill in enumerate(skills):
+        cols[i].markdown(
+            f"<div style='background:#1c1c1e; padding:20px; border-radius:10px; text-align:center;'>{skill}</div>",
+            unsafe_allow_html=True)
 
+# ৬. প্রজেক্টস
 elif menu == "Projects":
-    st.title("My Projects")
-    st.write("### 1. Portfolio Website")
-    st.link_button("View Source", "https://github.com/Tanziruu")
-
-elif menu == "Contact":
-    st.title("Get In Touch")
-    st.write("Email: tanzir@example.com")
+    st.title("Work Showcase")
+    st.info("Explore my GitHub to see the code behind the magic.")
+    st.link_button("View on GitHub", "https://github.com/Tanziruu")
