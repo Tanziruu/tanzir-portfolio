@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75c3a60-39d9-441e-b8b5-053a954b553f" name="Changes" comment="Hiding watermark 5th try">
+    <list default="true" id="f75c3a60-39d9-441e-b8b5-053a954b553f" name="Changes" comment="Hiding watermark 6th try">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779799885696</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Hiding watermark 6th try">
+      <option name="closed" value="true" />
+      <created>1779799920506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779799920506</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -236,6 +244,7 @@
     <MESSAGE value="Hiding watermark 3rd try" />
     <MESSAGE value="Hiding watermark 4th try" />
     <MESSAGE value="Hiding watermark 5th try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hiding watermark 5th try" />
+    <MESSAGE value="Hiding watermark 6th try" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hiding watermark 6th try" />
   </component>
 </project>
