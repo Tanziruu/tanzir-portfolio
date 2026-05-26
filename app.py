@@ -61,18 +61,20 @@ elif menu == "Contact":
     st.write("- **GitHub:** [github.com/Tanziruu](https://github.com)")  # এখানে তোমার আসল ইউজারনেম দিয়ে নিও
     st.write("- **LinkedIn:** [linkedin.com/in/tanzir-ahmed](https://linkedin.com)")
 
+    # ২০২৩-২০২৬ স্ট্রিমলিট আপডেটের জন্য একদম লেটেস্ট সিএসএস ট্রিক
     hide_streamlit_style = """
                 <style>
-                #MainMenu {visibility: hidden; display: none;}
-                footer {visibility: hidden; display: none;}
-                header {visibility: hidden; display: none;}
-                .stAppDeployButton {visibility: hidden; display: none;}
-                [data-testid="stStatusWidget"] {visibility: hidden; display: none;}
-                div[class^="st-emotion-cache"] footer {visibility: hidden; display: none;}
-                button[title="View Streamlit app"] {visibility: hidden; display: none;}
-
-                /* মোবাইলের বিশেষ টুলবার ও আইকন সরানোর জন্য */
+                /* ওপরে ডানদিকের Fork, GitHub লোগো এবং থ্রি-ডট মেনু হাইড করার জন্য */
+                [data-testid="stToolbarActions"] {visibility: hidden; display: none;}
                 .stAppToolbar {visibility: hidden; display: none;}
+
+                /* নিচের সেই লাল রঙের Hosted with Streamlit ফুটার এবং কিং আইকন সরানোর জন্য */
+                footer {visibility: hidden; display: none;}
+                [data-testid="stFooter"] {visibility: hidden; display: none;}
+                div[class^="st-emotion-cache"] footer {visibility: hidden; display: none;}
+
+                /* ওপরের এক্সট্রা সাদা/কালো হেডার স্পেস মুছে ফেলার জন্য */
+                header {visibility: hidden; display: none;}
                 [data-testid="stHeader"] {visibility: hidden; display: none;}
                 </style>
                 """
