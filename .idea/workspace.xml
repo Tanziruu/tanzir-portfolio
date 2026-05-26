@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75c3a60-39d9-441e-b8b5-053a954b553f" name="Changes" comment="Hiding watermark 2nd try">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="f75c3a60-39d9-441e-b8b5-053a954b553f" name="Changes" comment="Hiding watermark 3rd try" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,13 +200,22 @@
       <option name="project" value="LOCAL" />
       <updated>1779798447563</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Hiding watermark 3rd try">
+      <option name="closed" value="true" />
+      <created>1779799287546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779799287546</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added portfolio code" />
     <MESSAGE value="Hiding watermark" />
     <MESSAGE value="Hiding watermark 2nd try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hiding watermark 2nd try" />
+    <MESSAGE value="Hiding watermark 3rd try" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hiding watermark 3rd try" />
   </component>
 </project>
