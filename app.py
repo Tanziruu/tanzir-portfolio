@@ -61,13 +61,16 @@ elif menu == "Contact":
     st.write("- **GitHub:** [github.com/Tanziruu](https://github.com)")  # এখানে তোমার আসল ইউজারনেম দিয়ে নিও
     st.write("- **LinkedIn:** [linkedin.com/in/tanzir-ahmed](https://linkedin.com)")
 
-    # স্ট্রিমলিটের আইকন, মেনু এবং ফুটার হাইড করার জন্য CSS ট্রিক
+    # পিসি ও মোবাইল উভয় ডিভাইসের সব স্ট্রিমলিট ব্র্যান্ডিং হাইড করার জন্য চূড়ান্ত CSS
     hide_streamlit_style = """
                 <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                .stAppDeployButton {display: none;}
-                header {visibility: hidden;}
+                #MainMenu {visibility: hidden; display: none;}
+                footer {visibility: hidden; display: none;}
+                header {visibility: hidden; display: none;}
+                .stAppDeployButton {visibility: hidden; display: none;}
+                [data-testid="stStatusWidget"] {visibility: hidden; display: none;}
+                div[class^="st-emotion-cache"] footer {visibility: hidden; display: none;}
+                button[title="View Streamlit app"] {visibility: hidden; display: none;}
                 </style>
                 """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
