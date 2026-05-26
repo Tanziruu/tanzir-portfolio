@@ -61,7 +61,6 @@ elif menu == "Contact":
     st.write("- **GitHub:** [github.com/Tanziruu](https://github.com)")  # এখানে তোমার আসল ইউজারনেম দিয়ে নিও
     st.write("- **LinkedIn:** [linkedin.com/in/tanzir-ahmed](https://linkedin.com)")
 
-    # পিসি ও মোবাইল উভয় ডিভাইসের সব স্ট্রিমলিট ব্র্যান্ডিং হাইড করার জন্য চূড়ান্ত CSS
     hide_streamlit_style = """
                 <style>
                 #MainMenu {visibility: hidden; display: none;}
@@ -71,6 +70,10 @@ elif menu == "Contact":
                 [data-testid="stStatusWidget"] {visibility: hidden; display: none;}
                 div[class^="st-emotion-cache"] footer {visibility: hidden; display: none;}
                 button[title="View Streamlit app"] {visibility: hidden; display: none;}
+
+                /* মোবাইলের বিশেষ টুলবার ও আইকন সরানোর জন্য */
+                .stAppToolbar {visibility: hidden; display: none;}
+                [data-testid="stHeader"] {visibility: hidden; display: none;}
                 </style>
                 """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
