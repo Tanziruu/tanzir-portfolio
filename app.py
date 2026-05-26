@@ -79,3 +79,24 @@ elif menu == "Contact":
                 </style>
                 """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+    import requests
+    import streamlit as str
+    from streamlit_lottie import st_lottie
+
+
+    # লটি অ্যানিমেশন লোড করার ফাংশন
+    def load_lottieurl(url):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
+
+
+    # উদাহরণ হিসেবে একটি কোডিং অ্যানিমেশন (তুমি চাইলে অন্য লিংকও দিতে পারো)
+    lottie_coding = load_lottieurl(
+        "https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json"
+    )
+
+    # তোমার হোম পেজে অ্যানিমেশনটি দেখানোর জন্য:
+    st_lottie(lottie_coding, height=300, key="coding")
