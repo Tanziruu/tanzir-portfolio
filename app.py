@@ -60,3 +60,14 @@ elif menu == "Contact":
     st.write("- **Location:** Demra, Dhaka, Bangladesh")
     st.write("- **GitHub:** [github.com/Tanziruu](https://github.com)")  # এখানে তোমার আসল ইউজারনেম দিয়ে নিও
     st.write("- **LinkedIn:** [linkedin.com/in/tanzir-ahmed](https://linkedin.com)")
+
+    # স্ট্রিমলিটের আইকন, মেনু এবং ফুটার হাইড করার জন্য CSS ট্রিক
+    hide_streamlit_style = """
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                .stAppDeployButton {display: none;}
+                header {visibility: hidden;}
+                </style>
+                """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
